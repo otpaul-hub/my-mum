@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Mom!</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="hero-section">
+      <h1>Happy Birthday, Mummy!</h1>
+      <p>We love you so much! Here's a special website just for you.</p>
+      <div id="countdown">
+        <span id="days"></span> Days <span id="hours"></span> Hours
+        <span id="minutes"></span> Minutes <span id="seconds"></span> Seconds
+      </div>
+    </div>
+
+    <div class="surprise-section">
+      <h2>Click the Button for a Surprise Gift</h2>
+      <button onclick="showSurprise()">Click Me</button>
+      <div id="surprise-container"></div>
+    </div>
+
+    <div class="gallery">
+      <h2>Special Memories</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="photo1.jpg" alt="Memory 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="photo2.jpg" alt="Memory 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="photo3.jpg" alt="Memory 3" />
+        </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+ 
+    <div class="message-wall">
+      <h2>Leave a Birthday Message</h2>
+      <textarea
+        id="message"
+        placeholder="Write your message here... In the format of (Name-Message-Date)"
+      ></textarea>
+      <button onclick="submitMessage()">Submit</button>
+      <div id="messages-container"></div>
+    </div>
+
+    <div class="poll-section">
+      <h2>Vote for Mom’s Best Quality</h2>
+      <form id="poll-form">
+        <label>
+          <input type="radio" name="poll" value="Kindness" /> Kindness </label
+        ><br />
+        <label> <input type="radio" name="poll" value="Humor" /> Humor </label
+        ><br />
+        <label> <input type="radio" name="poll" value="Wisdom" /> Wisdom </label
+        ><br />
+        <label>
+          <input type="radio" name="poll" value="Patience" /> Patience </label
+        ><br />
+          <input type="radio" name="poll" value="Discipline" /> Discipline </label
+        ><br />
+        <button type="button" onclick="submitPoll()">Submit Vote</button>
+      </form>
+      <div id="poll-result"></div>
+    </div>
+
+    <div class="wishlist-section">
+      <h2>Mom's Birthday Wishlist</h2>
+      <ul id="wishlist">
+        <!-- Pre-populate with some ideas -->
+        <li>Grilledfish</li>
+      </ul>
+      <input type="text" id="new-item" placeholder="Add a new wish..." />
+      <button onclick="addWishlistItem()">Add</button>
+    </div>
+
+    <div class="video-section">
+      <h2>Video Messages</h2>
+      <input type="file" id="videoUpload" accept="video/*" />
+      <button onclick="uploadVideo()">Upload Video</button>
+      <div id="video-container"></div>
+    </div>
+
+    <div class="photo-booth-section">
+      <h2>Virtual Birthday Photo Booth</h2>
+      <video id="cameraStream" width="400" autoplay></video>
+      <canvas id="photoCanvas" width="400" height="300"></canvas>
+      <br />
+      <button onclick="takePicture()">Take Picture</button>
+      <button onclick="savePicture()">Save Picture</button>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
