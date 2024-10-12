@@ -137,5 +137,5 @@ function submitPoll() {
 function showSurprise() {
   const surpriseContainer = document.getElementById("surprise-container");
   surpriseContainer.innerHTML =
-    '<img src="surprise-gift.jpg" alt="Surprise Gift!">';
+    '<img src="paul.jpg" alt="Surprise Gift!">';
 }
